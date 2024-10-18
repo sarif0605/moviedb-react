@@ -44,11 +44,11 @@ export const CarouselMovie: React.FC = () => {
             Movie Favorite
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-8">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam vel
-            error cupiditate tempore soluta veritatis!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam nam
+            officia ducimus mollitia eius odio!
           </p>
         </div>
-        <div className="hidden lg:carousel carousel-center bg-accent rounded-box space-x-4 p-4">
+        <div className="carousel carousel-center bg-accent rounded-box space-x-4 my-3  p-4">
           {popularMovies.map((movie) => (
             <div className="carousel-item" key={movie.id}>
               <div className="card bg-base-100 w-96 shadow-xl">

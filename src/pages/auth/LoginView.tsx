@@ -8,6 +8,10 @@ export const Login: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
+  const handleGetStarted = () => {
+    navigate("/"); // Navigasi kembali ke halaman utama
+  };
+
   const handleLogin = async () => {
     setIsLoading(true);
     setError(null);
@@ -48,24 +52,23 @@ export const Login: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4">Login to TMDb</h2>
-      {error && <p className="text-red-500">{error}</p>}
-      <div className="flex flex-col gap-4">
-        <button
-          className={`btn btn-primary ${isLoading ? "loading" : ""}`}
-          onClick={handleLogin}
-          disabled={isLoading}
-        >
-          Log in with TMDb
-        </button>
-        <button
-          className={`btn btn-secondary ${isLoading ? "loading" : ""}`}
-          onClick={handleGuestSession}
-          disabled={isLoading}
-        >
-          Continue as Guest
-        </button>
+    <div className="hero bg-base-200 min-h-screen">
+      <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          {error && <p className="text-red-500">{error}</p>}
+          <div className="flex flex-col gap-4 m-5  py-3">
+            <button
+              className={`btn btn-primary ${isLoading ? "loading" : ""}`}
+              onClick={handleLogin}
+              disabled={isLoading}
+            >
+              Log in with TMDb
+            </button>
+            <button className="btn btn-primary" onClick={handleGetStarted}>
+              kembali
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

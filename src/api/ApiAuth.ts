@@ -76,7 +76,7 @@ export const addFavoriteMovie = async (
   favorite: boolean
 ): Promise<void> => {
   try {
-    await axios.post(
+    const response = await axios.post(
       `${baseUrl}/account/${accountId}/favorite`,
       {
         media_type: "movie",
@@ -90,6 +90,8 @@ export const addFavoriteMovie = async (
         },
       }
     );
+
+    console.log("Add favorite response:", response.data); // Tambahkan log di sini
   } catch (error) {
     console.error("Error adding favorite movie:", error);
     throw error;

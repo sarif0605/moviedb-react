@@ -15,10 +15,10 @@ const router = createBrowserRouter([
       { path: "/", element: <HomeView /> },
       { path: "/favorites", element: <FavoriteMovies /> },
       { path: "/movies/:movieId", element: <MovieDetail /> },
-      { path: "login", element: <Login /> },
-      { path: "callback", element: <Callback /> },
     ],
   },
+  { path: "login", element: <Login /> },
+  { path: "callback", element: <Callback /> },
   { path: "*", element: <NotFound /> },
 ]);
 

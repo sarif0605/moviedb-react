@@ -29,7 +29,7 @@ export const Navbar: React.FC = () => {
   return (
     <div className="navbar bg-primary">
       <div className="flex-1">
-        <NavLink to="/" className="btn btn-ghost text-xl">
+        <NavLink to="/" className="btn btn-ghost text-xl text-white">
           Movie
         </NavLink>
       </div>
@@ -38,7 +38,7 @@ export const Navbar: React.FC = () => {
           {isAuthenticated ? (
             <>
               <li>
-                <NavLink to="/favorites" className="btn btn-ghost">
+                <NavLink to="/favorites" className="btn btn-ghost  text-white">
                   Favorites
                 </NavLink>
               </li>
