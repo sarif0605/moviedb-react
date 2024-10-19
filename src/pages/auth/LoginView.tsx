@@ -1,6 +1,6 @@
 // src/components/Login.tsx
 import React, { useState } from "react";
-import { getRequestToken, createGuestSession } from "../../api/ApiAuth";
+import { getRequestToken } from "../../api/ApiAuth";
 import { useNavigate } from "react-router-dom";
 
 export const Login: React.FC = () => {
@@ -9,7 +9,7 @@ export const Login: React.FC = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/"); // Navigasi kembali ke halaman utama
+    navigate("/");
   };
 
   const handleLogin = async () => {
@@ -26,26 +26,6 @@ export const Login: React.FC = () => {
     } catch (err) {
       console.error("Login error:", err);
       setError("An error occurred during login.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleGuestSession = async () => {
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      const guestSessionId = await createGuestSession();
-      if (guestSessionId) {
-        localStorage.setItem("guestSessionId", guestSessionId);
-        navigate("/");
-      } else {
-        setError("Failed to create guest session");
-      }
-    } catch (err) {
-      console.error("Guest session error:", err);
-      setError("An error occurred while creating a guest session.");
     } finally {
       setIsLoading(false);
     }
