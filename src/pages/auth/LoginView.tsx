@@ -1,6 +1,6 @@
 // src/components/Login.tsx
 import React, { useState } from "react";
-import { getRequestToken } from "../../api/ApiAuth";
+import { getRequestToken } from "../../services/ApiAuth";
 import { useNavigate } from "react-router-dom";
 
 export const Login: React.FC = () => {

@@ -2,10 +2,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { PublicLayout } from "./layouts/PublicLayout";
 import { HomeView } from "./pages/HomeView";
 import { Login } from "./pages/auth/LoginView";
-import { Callback } from "./components/nav/Callback";
+import { Callback } from "./components/Callback";
 import NotFound from "./components/NotFound";
-import { FavoriteMovies } from "./components/movies/FavoriteMovies";
-import MovieDetail from "./components/movies/MovieDetail";
+import { FavoriteMovies } from "./components/FavoriteMovies";
+import MovieDetail from "./components/MovieDetail";
 
 const router = createBrowserRouter([
   {

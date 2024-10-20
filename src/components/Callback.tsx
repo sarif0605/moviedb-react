@@ -1,7 +1,7 @@
 // src/components/Callback.tsx
 import React, { useEffect, useState } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
-import { createSession } from "../../api/ApiAuth";
+import { createSession } from "../services/ApiAuth";
 
 export const Callback: React.FC = () => {
   const [searchParams] = useSearchParams();

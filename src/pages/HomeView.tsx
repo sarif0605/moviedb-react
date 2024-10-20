@@ -1,10 +1,10 @@
 import React from "react";
-import { CarouselMovie } from "../components/movies/CarouselMovie";
-import { PopularMovies } from "../components/movies/MoviePopular";
+import { CarouselMovie } from "../components/CarouselMovie";
+import { PopularMovies } from "../components/PopularMovies";
 export const HomeView: React.FC = () => {
   return (
     <>
-      <section className="mx-auto max-w-6xl py-10">
+      <section className="mx-auto max-w-6xl py-4">
         <CarouselMovie />
       </section>
       <section className="mx-auto max-w-6xl py-20">

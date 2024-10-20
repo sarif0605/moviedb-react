@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Movie } from "../../types/movie";
-import { getMovieDetails } from "../../api/ApiMovie";
+import { Movie } from "../types/movie";
+import { getMovieDetails } from "../services/ApiMovie";
 import { FaInfoCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const MovieDetail: React.FC = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/"); // Navigasi kembali ke halaman utama
+    navigate("/");
   };
 
   useEffect(() => {
